@@ -1,0 +1,4 @@
+.DS_Store
+gen/
+bin/
+libs/android-support-v4.jar
