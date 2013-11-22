@@ -59,7 +59,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 
 		return super.onOptionsItemSelected(item);
 	}
-
+	
 	@Override
 	public void onClick(View v) {
 		if(v.getId() == R.id.button_done) {
@@ -389,5 +389,10 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		} catch (android.content.ActivityNotFoundException ex) {
 		    Toast.makeText(this, "There are no email clients installed.", Toast.LENGTH_SHORT).show();
 		}
+	}
+
+	public void radioClick(View v) {
+		InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+		imm.hideSoftInputFromWindow(v.getApplicationWindowToken(), 0);
 	}
 }
